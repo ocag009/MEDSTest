@@ -18,7 +18,6 @@ resource resourceGroup 'Microsoft.Resources/resourceGroups@2021-01-01' = {
     Environment: 'PROD'
     Owner: 'someone@email.com'
     BU: 'Engineering'
-    Tag1: 'testtag'
   }
 }
 
