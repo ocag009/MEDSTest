@@ -70,23 +70,23 @@ resource blobDeploymentScript 'Microsoft.Resources/deploymentScripts@2020-10-01'
 
       echo \"Downloading Container Script: File- experiencelab.sh\"
       wget -O experiencelab.sh https://github.com/ocag009/MEDSTest/blob/main/control-plane/experiencelab.sh
-      az storage blob upload -f experiencelab.sh -c $AZURE_STORAGE_CONTAINER -n experiencelab.sh -t $SPGI_RESOURCE_TAGS
+      az storage blob upload -f experiencelab.sh -c $AZURE_STORAGE_CONTAINER -n experiencelab.sh --tags $SPGI_RESOURCE_TAGS
 
       echo \"Downloading Container Script: File- template-open-test-data.json\"
       wget -O template-open-test-data.json https://github.com/microsoft/energy-data-services-experience-lab/releases/latest/download/template.json
-      az storage blob upload -f template-open-test-data.json -c $AZURE_STORAGE_CONTAINER -n template-open-test-data.json -t $SPGI_RESOURCE_TAGS
+      az storage blob upload -f template-open-test-data.json -c $AZURE_STORAGE_CONTAINER -n template-open-test-data.json --tags $SPGI_RESOURCE_TAGS
 
       echo \"Downloading Container Script: File- downloadTnoData.sh\"
       wget -O downloadTnoData.sh https://github.com/microsoft/energy-data-services-experience-lab/releases/latest/download/downloadTnoData.sh
-      az storage blob upload -f downloadTnoData.sh -c $AZURE_STORAGE_CONTAINER -n downloadTnoData.sh -t $SPGI_RESOURCE_TAGS
+      az storage blob upload -f downloadTnoData.sh -c $AZURE_STORAGE_CONTAINER -n downloadTnoData.sh --tags $SPGI_RESOURCE_TAGS
 
       echo \"Downloading Container Script: File- developer-portal.tar.gz\"
       wget -O developer-portal.tar.gz https://github.com/microsoft/energy-data-services-experience-lab/releases/latest/download/developer-portal.tar.gz
-      az storage blob upload -f developer-portal.tar.gz -c $AZURE_STORAGE_CONTAINER -n developer-portal.tar.gz -t $SPGI_RESOURCE_TAGS
+      az storage blob upload -f developer-portal.tar.gz -c $AZURE_STORAGE_CONTAINER -n developer-portal.tar.gz --tags $SPGI_RESOURCE_TAGS
 
       echo \"Downloading Container Script: File- rest-scripts.zip\"
       wget -O rest-scripts.zip https://github.com/microsoft/energy-data-services-experience-lab/releases/latest/download/rest-scripts.zip
-      az storage blob upload -f rest-scripts.zip -c $AZURE_STORAGE_CONTAINER -n rest-scripts.zip -t $SPGI_RESOURCE_TAGS
+      az storage blob upload -f rest-scripts.zip -c $AZURE_STORAGE_CONTAINER -n rest-scripts.zip --tags $SPGI_RESOURCE_TAGS
     '''
   }
 }
